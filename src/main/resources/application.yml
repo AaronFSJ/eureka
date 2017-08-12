@@ -1,0 +1,12 @@
+server:
+  port: 8083
+eureka:
+  client:
+    #是否将自己注册到eureka server中，默认为true,由于本身就是server,所以不用
+    register-with-eureka: false
+    #是否从eureak server获取注册信息，默认为true, 因为是单点server不用从其他eureka server复制节点数据，所以设置为false
+    fetch-registry: false
+    #Eureka server交互地址，查询服务和注册服务都依赖这个地址
+    service-url:
+          defaultZone: http://localhost:8083/eureka/
+
